@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logocamp404.jpg";
+import logo from "../assets/logo1.png";
 
 function Navbar() {
   return (
@@ -7,15 +7,15 @@ function Navbar() {
       <nav className="navbar navbar-expand bg-dark">
         <div className="container">
           <ul className="nav">
-            <img src={logo} alt="" style={{ height: "40px" }} />
+            <img src={logo} alt="" style={{ height: "50px" }} />
             <li>
               <Link to="/" className="nav-link">
-                Beranda
+                HOME
               </Link>
             </li>
             <li>
               <Link to="/manajemen-buku" className="nav-link">
-                Manajemen Buku
+                Book Management
               </Link>
             </li>
           </ul>

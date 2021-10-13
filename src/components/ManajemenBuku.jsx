@@ -44,12 +44,12 @@ function ManajemenBuku({ bookList, store, update, remove }) {
   //eventHandling
   return (
     <div className="container mt-3">
-      <h1 className="text-center">Manajemen Buku</h1>
+      <h1 className="text-center">Book Management</h1>
 
       {/* Ini Form Buat Tambah BUKU */}
       {form === "create" && (
         <div id="formTambah">
-          <h5>Tambah Buku</h5>
+          <h5>Add Book</h5>
           <hr />
           <form action="" className="form-row" onSubmit={submitAdd}>
             <div className="col-3">
@@ -57,7 +57,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="judul"
                 className="form-control mx-2 mt-3"
-                placeholder="Isikan Judul"
+                placeholder="Title"
                 onChange={handleJudul}
               />
             </div>
@@ -66,7 +66,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="pengarang"
                 className="form-control mx-2 mt-2"
-                placeholder="Isikan Pengarang"
+                placeholder="Author"
                 onChange={handlePengarang}
               />
             </div>
@@ -75,7 +75,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="harga"
                 className="form-control mx-2 mt-2"
-                placeholder="Isikan Harga"
+                placeholder="Price"
                 onChange={handleHarga}
               />
             </div>
@@ -84,7 +84,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="number"
                 name="stok"
                 className="form-control mx-2 mt-2"
-                placeholder="Isikan Stok"
+                placeholder="Stock"
                 onChange={handleStok}
               />
             </div>
@@ -93,7 +93,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="submit"
                 name="judul"
                 className="btn btn-primary ml-5 mt-3"
-                value="Simpan"
+                value="Save"
               />
             </div>
           </form>
@@ -102,7 +102,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
 
       {form === "edit" && (
         <div id="formUbah" onSubmit={submitChange}>
-          <h5>Ubah Buku</h5>
+          <h5>Update Book</h5>
           <hr />
           <form action="" className="form-row">
             <div className="col-3">
@@ -110,7 +110,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="judul"
                 className="form-control mx-2 mt-2"
-                placeholder="Judul"
+                placeholder="Title"
                 onChange={handleJudul}
                 value={inputBook.judul}
               />
@@ -120,7 +120,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="pengarang"
                 className="form-control mx-2 mt-2"
-                placeholder="Pengarang"
+                placeholder="Author"
                 onChange={handlePengarang}
                 value={inputBook.pengarang}
               />
@@ -130,7 +130,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="text"
                 name="harga"
                 className="form-control mx-2 mt-2"
-                placeholder="Harga"
+                placeholder="Price"
                 onChange={handleHarga}
                 value={inputBook.harga}
               />
@@ -140,7 +140,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                 type="number"
                 name="stok"
                 className="form-control mx-2 mt-2"
-                placeholder="Stok"
+                placeholder="Stock"
                 onChange={handleStok}
                 value={inputBook.stok}
               />
@@ -149,7 +149,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
               <input
                 type="submit"
                 className="btn btn-warning ml-5 mt-3"
-                value="Ubah"
+                value="Update"
               />
             </div>
           </form>
@@ -157,21 +157,21 @@ function ManajemenBuku({ bookList, store, update, remove }) {
       )}
 
       <div id="daftarBuku">
-        <h2 className="mt-3">Daftar Buku</h2>
+        <h2 className="mt-3">Book List</h2>
         <hr />
         <button className="btn btn-primary m-2" onClick={showCreate}>
-          Tambah Buku
+          Add Book
         </button>
         <table className="table table-bordered">
           {/* Ini MENU di Tabel */}
           <thead>
             <tr>
               <th>No.</th>
-              <th>Judul</th>
-              <th>Pengarang</th>
-              <th>Harga</th>
-              <th>Stok</th>
-              <th>Aksi</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Action</th>
             </tr>
           </thead>
 
@@ -195,7 +195,7 @@ function ManajemenBuku({ bookList, store, update, remove }) {
                     className="btn btn-danger"
                     onClick={() => deleteBook(book)}
                   >
-                    Hapus
+                    Delete
                   </button>
                 </td>
               </tr>
